@@ -1,0 +1,622 @@
+<TestLog> Running test 'original'.
+<CreateLog> Plang.CSharpRuntime._GodMachine(1) was created by task '2'.
+<CreateLog> PImplementation.Test_Original_Model(2) was created by Plang.CSharpRuntime._GodMachine(1).
+<StateLog> PImplementation.Test_Original_Model(2) enters state 'Init_2'.
+<CreateLog> GeoFence(3) was created by PImplementation.Test_Original_Model(2).
+<StateLog> GeoFence(3) enters state 'Init_1'.
+<PrintLog> GeoFence Feature Enabled!
+<CreateLog> Battery(4) was created by PImplementation.Test_Original_Model(2).
+<SendLog> 'GeoFence(3)' in state 'Init_1' sent event 'eStartGeoFence' to 'GeoFence(3)'.
+<GotoLog> GeoFence(3) is transitioning from state 'Init_1' to state 'Monitoring_1'.
+<StateLog> GeoFence(3) exits state 'Init_1'.
+<StateLog> GeoFence(3) enters state 'Monitoring_1'.
+<DequeueLog> 'GeoFence(3)' dequeued event 'eStartGeoFence' in state 'Monitoring_1'.
+<SendLog> 'GeoFence(3)' in state 'Monitoring_1' sent event 'eRequestDroneMovement' to 'GeoFence(3)'.
+<GotoLog> GeoFence(3) is transitioning from state 'Monitoring_1' to state 'GenerateMovement'.
+<StateLog> GeoFence(3) exits state 'Monitoring_1'.
+<StateLog> GeoFence(3) enters state 'GenerateMovement'.
+<DequeueLog> 'GeoFence(3)' dequeued event 'eRequestDroneMovement' in state 'GenerateMovement'.
+<PrintLog> Movement Generated, horizontal movement = -3, vertical movement = -1
+<StateLog> Battery(4) enters state 'Init'.
+<PrintLog> Battery Failsafe Feature Enabled!
+<SendLog> 'Battery(4)' in state 'Init' sent event 'eStartBatteryFailSafe with payload (<landing_threshold_amount:20, >)' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Init' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Init'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eStartBatteryFailSafe with payload (<landing_threshold_amount:20, >)' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 99
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'GeoFence(3)' in state 'GenerateMovement' sent event 'eDroneMovementResponse with payload (<horizontal_movement:-3, vertical_movement:-1, >)' to 'GeoFence(3)'.
+<GotoLog> GeoFence(3) is transitioning from state 'GenerateMovement' to state 'Monitoring_1'.
+<StateLog> GeoFence(3) exits state 'GenerateMovement'.
+<StateLog> GeoFence(3) enters state 'Monitoring_1'.
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'GeoFence(3)' dequeued event 'eDroneMovementResponse with payload (<horizontal_movement:-3, vertical_movement:-1, >)' in state 'Monitoring_1'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 98
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 97
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 96
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 95
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 94
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 93
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 92
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 91
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 90
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 89
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 88
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 87
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 86
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 85
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 84
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 83
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 82
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 81
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 80
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 79
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 78
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 77
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 76
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 75
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 74
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 73
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 72
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 71
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 70
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 69
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 68
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 67
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 66
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 65
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 64
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 63
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 62
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 61
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 60
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 59
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 58
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 57
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 56
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 55
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 54
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 53
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 52
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 51
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 50
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 49
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 48
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 47
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 46
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 45
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 44
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 43
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 42
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 41
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 40
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 39
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 38
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 37
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 36
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 35
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 34
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 33
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 32
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 31
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 30
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 29
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 28
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 27
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 26
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 25
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 24
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 23
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 22
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 21
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 20
+<PrintLog> battery above threshold, continue monitoring!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eUpdateBatteryPercentage' to 'Battery(4)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Monitoring'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Monitoring'.
+<DequeueLog> 'Battery(4)' dequeued event 'eUpdateBatteryPercentage' in state 'Monitoring'.
+<PrintLog> battery updated, battery = 19
+<PrintLog> battery below threshold, landing initiated!
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eLanding' to 'Battery(4)'.
+<SendLog> 'Battery(4)' in state 'Monitoring' sent event 'eLanding' to 'GeoFence(3)'.
+<GotoLog> Battery(4) is transitioning from state 'Monitoring' to state 'Landing'.
+<StateLog> Battery(4) exits state 'Monitoring'.
+<StateLog> Battery(4) enters state 'Landing'.
+<DequeueLog> 'GeoFence(3)' dequeued event 'eLanding' in state 'Monitoring_1'.
+<GotoLog> GeoFence(3) is transitioning from state 'Monitoring_1' to state 'Landing_1'.
+<StateLog> GeoFence(3) exits state 'Monitoring_1'.
+<StateLog> GeoFence(3) enters state 'Landing_1'.
+<PrintLog> Landing! Horizonal Distance Remain Unchanged
+<DequeueLog> 'Battery(4)' dequeued event 'eLanding' in state 'Landing'.
+<PrintLog> Landing initiated!
+<SendLog> 'Battery(4)' in state 'Landing' sent event 'eLanding' to 'GeoFence(3)'.
+<GotoLog> Battery(4) is transitioning from state 'Landing' to state 'Landed'.
+<StateLog> Battery(4) exits state 'Landing'.
+<StateLog> Battery(4) enters state 'Landed'.
+<PrintLog> Landed!
+<DequeueLog> 'GeoFence(3)' dequeued event 'eLanding' in state 'Landing_1'.
+<StateLog> GeoFence(3) exits state 'Landing_1'.
+<PopLog> 'GeoFence(3)' popped with unhandled event 'eLanding' and reentered state 'Landing_1.
+<ExceptionLog> GeoFence(3) running action '' in state 'Landing_1' threw exception 'UnhandledEventException'.
+<ErrorLog> GeoFence(3) received event 'PImplementation.eLanding' that cannot be handled.
+<StrategyLog> Found bug using 'random' strategy.
+<StrategyLog> Checking statistics:
+<StrategyLog> Found 1 bug.
+<StrategyLog> Scheduling statistics:
+<StrategyLog> Explored 1 schedule: 1 fair and 0 unfair.
+<StrategyLog> Found 100.00% buggy schedules.
+<StrategyLog> Number of scheduling points in fair terminating schedules: 184 (min), 184 (avg), 184 (max).

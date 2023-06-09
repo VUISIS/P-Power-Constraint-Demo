@@ -1,0 +1,82 @@
+﻿<DirectedGraph xmlns='http://schemas.microsoft.com/vs/2009/dgml'>
+  <Nodes>
+    <Node Id='PImplementation.Battery' Category='StateMachine' Group='Expanded'/>
+    <Node Id='PImplementation.Battery.Init' Label='Init'/>
+    <Node Id='PImplementation.Battery.Landed' Label='Landed'/>
+    <Node Id='PImplementation.Battery.Landing' Label='Landing'/>
+    <Node Id='PImplementation.Battery.Monitoring' Label='Monitoring'/>
+    <Node Id='PImplementation.Battery.__InitState__' Label='__InitState__'/>
+    <Node Id='PImplementation.GeoFence' Category='StateMachine' Group='Expanded'/>
+    <Node Id='PImplementation.GeoFence.GenerateMovement' Label='GenerateMovement'/>
+    <Node Id='PImplementation.GeoFence.Init_1' Label='Init_1'/>
+    <Node Id='PImplementation.GeoFence.Landing_1' Label='Landing_1'/>
+    <Node Id='PImplementation.GeoFence.Monitoring_1' Label='Monitoring_1'/>
+    <Node Id='PImplementation.GeoFence.__InitState__' Label='__InitState__'/>
+    <Node Id='PImplementation.Test_Original_Model' Category='StateMachine' Group='Expanded'/>
+    <Node Id='PImplementation.Test_Original_Model.Init_2' Label='Init_2'/>
+    <Node Id='PImplementation.Test_Original_Model.__InitState__' Label='__InitState__'/>
+    <Node Id='Plang.CSharpRuntime._GodMachine' Category='StateMachine' Group='Expanded'/>
+    <Node Id='Plang.CSharpRuntime._GodMachine.Init' Label='Init'/>
+  </Nodes>
+  <Links>
+    <Link Source='PImplementation.Battery' Target='PImplementation.Battery.Init' Category='Contains'/>
+    <Link Source='PImplementation.Battery' Target='PImplementation.Battery.Landed' Category='Contains'/>
+    <Link Source='PImplementation.Battery' Target='PImplementation.Battery.Landing' Category='Contains'/>
+    <Link Source='PImplementation.Battery' Target='PImplementation.Battery.Monitoring' Category='Contains'/>
+    <Link Source='PImplementation.Battery' Target='PImplementation.Battery.__InitState__' Category='Contains'/>
+    <Link Source='PImplementation.Battery.Init' Target='PImplementation.Battery.Monitoring' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.Battery.Init' Target='PImplementation.Battery.Monitoring' Label='eStartBatteryFailSafe' Index='1' EventId='PImplementation.eStartBatteryFailSafe' HandledBy='Monitoring'/>
+    <Link Source='PImplementation.Battery.Landing' Target='PImplementation.Battery.Landed' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.Battery.Monitoring' Target='PImplementation.Battery.Landing' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.Battery.Monitoring' Target='PImplementation.Battery.Landing' Label='eLanding' Index='1' EventId='PImplementation.eLanding' HandledBy='Landing'/>
+    <Link Source='PImplementation.Battery.Monitoring' Target='PImplementation.Battery.Monitoring' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.Battery.Monitoring' Target='PImplementation.GeoFence.Monitoring_1' Label='eLanding' Index='0' EventId='PImplementation.eLanding' HandledBy='Monitoring_1'/>
+    <Link Source='PImplementation.Battery.__InitState__' Target='PImplementation.Battery.Init' Label='ConstructorEvent' Index='0' EventId='PImplementation.Battery+ConstructorEvent'/>
+    <Link Source='PImplementation.GeoFence' Target='PImplementation.GeoFence.GenerateMovement' Category='Contains'/>
+    <Link Source='PImplementation.GeoFence' Target='PImplementation.GeoFence.Init_1' Category='Contains'/>
+    <Link Source='PImplementation.GeoFence' Target='PImplementation.GeoFence.Landing_1' Category='Contains'/>
+    <Link Source='PImplementation.GeoFence' Target='PImplementation.GeoFence.Monitoring_1' Category='Contains'/>
+    <Link Source='PImplementation.GeoFence' Target='PImplementation.GeoFence.__InitState__' Category='Contains'/>
+    <Link Source='PImplementation.GeoFence.GenerateMovement' Target='PImplementation.GeoFence.Monitoring_1' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.GeoFence.GenerateMovement' Target='PImplementation.GeoFence.Monitoring_1' Label='eDroneMovementResponse' Index='1' EventId='PImplementation.eDroneMovementResponse' HandledBy='Monitoring_1'/>
+    <Link Source='PImplementation.GeoFence.Init_1' Target='PImplementation.GeoFence.Monitoring_1' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.GeoFence.Init_1' Target='PImplementation.GeoFence.Monitoring_1' Label='eStartGeoFence' Index='1' EventId='PImplementation.eStartGeoFence' HandledBy='Monitoring_1'/>
+    <Link Source='PImplementation.GeoFence.Monitoring_1' Target='PImplementation.GeoFence.GenerateMovement' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.GeoFence.Monitoring_1' Target='PImplementation.GeoFence.GenerateMovement' Label='eRequestDroneMovement' Index='1' EventId='PImplementation.eRequestDroneMovement' HandledBy='GenerateMovement'/>
+    <Link Source='PImplementation.GeoFence.Monitoring_1' Target='PImplementation.GeoFence.Landing_1' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.GeoFence.__InitState__' Target='PImplementation.GeoFence.Init_1' Label='ConstructorEvent' Index='0' EventId='PImplementation.GeoFence+ConstructorEvent'/>
+    <Link Source='PImplementation.Test_Original_Model' Target='PImplementation.Test_Original_Model.Init_2' Category='Contains'/>
+    <Link Source='PImplementation.Test_Original_Model' Target='PImplementation.Test_Original_Model.__InitState__' Category='Contains'/>
+    <Link Source='PImplementation.Test_Original_Model.__InitState__' Target='PImplementation.Test_Original_Model.Init_2' Label='ConstructorEvent' Index='0' EventId='PImplementation.Test_Original_Model+ConstructorEvent'/>
+    <Link Source='Plang.CSharpRuntime._GodMachine' Target='Plang.CSharpRuntime._GodMachine.Init' Category='Contains'/>
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Error" ValueLabel="True">
+      <Condition Expression="HasCategory('Error')" />
+      <Setter Property="Background" Value="#FFC15656" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Actor" ValueLabel="True">
+      <Condition Expression="HasCategory('Actor')" />
+      <Setter Property="Background" Value="#FF57AC56" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Monitor" ValueLabel="True">
+      <Condition Expression="HasCategory('Monitor')" />
+      <Setter Property="Background" Value="#FF558FDA" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="halt" ValueLabel="True">
+      <Condition Expression="HasCategory('halt')" />
+      <Setter Property="Stroke" Value="#FFFF6C6C" />
+      <Setter Property="StrokeDashArray" Value="4 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="push" ValueLabel="True">
+      <Condition Expression="HasCategory('push')" />
+      <Setter Property="Stroke" Value="#FF7380F5" />
+      <Setter Property="StrokeDashArray" Value="4 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="pop" ValueLabel="True">
+      <Condition Expression="HasCategory('pop')" />
+      <Setter Property="Stroke" Value="#FF7380F5" />
+      <Setter Property="StrokeDashArray" Value="4 2" />
+    </Style>
+  </Styles>
+</DirectedGraph>

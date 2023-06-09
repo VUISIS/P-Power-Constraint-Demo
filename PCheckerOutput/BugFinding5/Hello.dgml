@@ -1,0 +1,76 @@
+﻿<DirectedGraph xmlns='http://schemas.microsoft.com/vs/2009/dgml'>
+  <Nodes>
+    <Node Id='PImplementation.AlwaysCorrect' Label='PImplementation.AlwaysCorrect' Category='Monitor' Group='Expanded'/>
+    <Node Id='PImplementation.AlwaysCorrect.Init_2' Label='Init_2'/>
+    <Node Id='PImplementation.AlwaysCorrect.WaitForPingPongEvents' Label='WaitForPingPongEvents'/>
+    <Node Id='PImplementation.AlwaysCorrect.WaitForPingPongEvents[hot]' Label='WaitForPingPongEvents[hot]'/>
+    <Node Id='PImplementation.Ping' Category='StateMachine' Group='Expanded'/>
+    <Node Id='PImplementation.Ping.Init_1' Label='Init_1'/>
+    <Node Id='PImplementation.Ping.Ping_1' Label='Ping_1'/>
+    <Node Id='PImplementation.Ping.__InitState__' Label='__InitState__'/>
+    <Node Id='PImplementation.Pong' Category='StateMachine' Group='Expanded'/>
+    <Node Id='PImplementation.Pong.Init' Label='Init'/>
+    <Node Id='PImplementation.Pong.Pong_1' Label='Pong_1'/>
+    <Node Id='PImplementation.Pong.__InitState__' Label='__InitState__'/>
+    <Node Id='PImplementation.Test' Category='StateMachine' Group='Expanded'/>
+    <Node Id='PImplementation.Test.Init_3' Label='Init_3'/>
+    <Node Id='PImplementation.Test.__InitState__' Label='__InitState__'/>
+    <Node Id='Plang.CSharpRuntime._GodMachine' Category='StateMachine' Group='Expanded'/>
+    <Node Id='Plang.CSharpRuntime._GodMachine.Init' Label='Init'/>
+  </Nodes>
+  <Links>
+    <Link Source='PImplementation.AlwaysCorrect' Target='PImplementation.AlwaysCorrect.Init_2' Category='Contains'/>
+    <Link Source='PImplementation.AlwaysCorrect' Target='PImplementation.AlwaysCorrect.WaitForPingPongEvents' Category='Contains'/>
+    <Link Source='PImplementation.AlwaysCorrect' Target='PImplementation.AlwaysCorrect.WaitForPingPongEvents[hot]' Category='Contains'/>
+    <Link Source='PImplementation.AlwaysCorrect.Init_2' Target='PImplementation.AlwaysCorrect.WaitForPingPongEvents[hot]' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.AlwaysCorrect.WaitForPingPongEvents' Target='PImplementation.AlwaysCorrect.WaitForPingPongEvents[hot]' Label='ePing' Index='0' EventId='ePing'/>
+    <Link Source='PImplementation.AlwaysCorrect.WaitForPingPongEvents' Target='PImplementation.AlwaysCorrect.WaitForPingPongEvents[hot]' Label='ePong' Index='1' EventId='ePong'/>
+    <Link Source='PImplementation.Ping' Target='PImplementation.Ping.Init_1' Category='Contains'/>
+    <Link Source='PImplementation.Ping' Target='PImplementation.Ping.Ping_1' Category='Contains'/>
+    <Link Source='PImplementation.Ping' Target='PImplementation.Ping.__InitState__' Category='Contains'/>
+    <Link Source='PImplementation.Ping.Init_1' Target='PImplementation.Ping.Ping_1' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.Ping.Ping_1' Target='PImplementation.AlwaysCorrect.WaitForPingPongEvents' Label='ePing' Index='0' EventId='ePing'/>
+    <Link Source='PImplementation.Ping.Ping_1' Target='PImplementation.Pong.Pong_1' Label='ePing' Index='0' EventId='PImplementation.ePing' HandledBy='Pong_1'/>
+    <Link Source='PImplementation.Ping.__InitState__' Target='PImplementation.Ping.Init_1' Label='ConstructorEvent' Index='0' EventId='PImplementation.Ping+ConstructorEvent'/>
+    <Link Source='PImplementation.Pong' Target='PImplementation.Pong.Init' Category='Contains'/>
+    <Link Source='PImplementation.Pong' Target='PImplementation.Pong.Pong_1' Category='Contains'/>
+    <Link Source='PImplementation.Pong' Target='PImplementation.Pong.__InitState__' Category='Contains'/>
+    <Link Source='PImplementation.Pong.Init' Target='PImplementation.Pong.Pong_1' Label='goto' Category='goto' Index='0' EventId='PChecker.Actors.Events.GotoStateEvent'/>
+    <Link Source='PImplementation.Pong.Pong_1' Target='PImplementation.AlwaysCorrect.WaitForPingPongEvents' Label='ePong' Index='0' EventId='ePong'/>
+    <Link Source='PImplementation.Pong.Pong_1' Target='PImplementation.Ping.Ping_1' Label='ePong' Index='0' EventId='PImplementation.ePong' HandledBy='Ping_1'/>
+    <Link Source='PImplementation.Pong.__InitState__' Target='PImplementation.Pong.Init' Label='ConstructorEvent' Index='0' EventId='PImplementation.Pong+ConstructorEvent'/>
+    <Link Source='PImplementation.Test' Target='PImplementation.Test.Init_3' Category='Contains'/>
+    <Link Source='PImplementation.Test' Target='PImplementation.Test.__InitState__' Category='Contains'/>
+    <Link Source='PImplementation.Test.__InitState__' Target='PImplementation.Test.Init_3' Label='ConstructorEvent' Index='0' EventId='PImplementation.Test+ConstructorEvent'/>
+    <Link Source='Plang.CSharpRuntime._GodMachine' Target='Plang.CSharpRuntime._GodMachine.Init' Category='Contains'/>
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Error" ValueLabel="True">
+      <Condition Expression="HasCategory('Error')" />
+      <Setter Property="Background" Value="#FFC15656" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Actor" ValueLabel="True">
+      <Condition Expression="HasCategory('Actor')" />
+      <Setter Property="Background" Value="#FF57AC56" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Monitor" ValueLabel="True">
+      <Condition Expression="HasCategory('Monitor')" />
+      <Setter Property="Background" Value="#FF558FDA" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="halt" ValueLabel="True">
+      <Condition Expression="HasCategory('halt')" />
+      <Setter Property="Stroke" Value="#FFFF6C6C" />
+      <Setter Property="StrokeDashArray" Value="4 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="push" ValueLabel="True">
+      <Condition Expression="HasCategory('push')" />
+      <Setter Property="Stroke" Value="#FF7380F5" />
+      <Setter Property="StrokeDashArray" Value="4 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="pop" ValueLabel="True">
+      <Condition Expression="HasCategory('pop')" />
+      <Setter Property="Stroke" Value="#FF7380F5" />
+      <Setter Property="StrokeDashArray" Value="4 2" />
+    </Style>
+  </Styles>
+</DirectedGraph>

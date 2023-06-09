@@ -1,0 +1,75 @@
+<TestLog> Running test 'tc'.
+<CreateLog> AlwaysCorrect was created.
+<MonitorLog> AlwaysCorrect enters state 'Init_2'.
+<MonitorLog> Monitor 'AlwaysCorrect' raised event 'GotoStateEvent' in state 'Init_2'.
+<MonitorLog> AlwaysCorrect exits state 'Init_2'.
+<MonitorLog> AlwaysCorrect enters hot state 'WaitForPingPongEvents'.
+<CreateLog> Plang.CSharpRuntime._GodMachine(1) was created by task '2'.
+<CreateLog> PImplementation.Test(2) was created by Plang.CSharpRuntime._GodMachine(1).
+<StateLog> PImplementation.Test(2) enters state 'Init_3'.
+<CreateLog> Pong(3) was created by PImplementation.Test(2).
+<StateLog> Pong(3) enters state 'Init'.
+<GotoLog> Pong(3) is transitioning from state 'Init' to state 'Pong_1'.
+<StateLog> Pong(3) exits state 'Init'.
+<StateLog> Pong(3) enters state 'Pong_1'.
+<CreateLog> Ping(4) was created by PImplementation.Test(2).
+<StateLog> Ping(4) enters state 'Init_1'.
+<GotoLog> Ping(4) is transitioning from state 'Init_1' to state 'Ping_1'.
+<StateLog> Ping(4) exits state 'Init_1'.
+<StateLog> Ping(4) enters state 'Ping_1'.
+<PrintLog> Ping called, counter = 1
+<MonitorLog> AlwaysCorrect is processing event 'ePing' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 1
+<SendLog> 'Ping(4)' in state 'Ping_1' sent event 'ePing with payload (<source:Ping(4), >)' to 'Pong(3)'.
+<DequeueLog> 'Pong(3)' dequeued event 'ePing with payload (<source:Ping(4), >)' in state 'Pong_1'.
+<PrintLog> Pong called, counter = 1
+<MonitorLog> AlwaysCorrect is processing event 'ePong' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 2
+<SendLog> 'Pong(3)' in state 'Pong_1' sent event 'ePong with payload (<source:Pong(3), >)' to 'Ping(4)'.
+<DequeueLog> 'Ping(4)' dequeued event 'ePong with payload (<source:Pong(3), >)' in state 'Ping_1'.
+<MonitorLog> AlwaysCorrect is processing event 'ePing' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 3
+<SendLog> 'Ping(4)' in state 'Ping_1' sent event 'ePing with payload (<source:Ping(4), >)' to 'Pong(3)'.
+<DequeueLog> 'Pong(3)' dequeued event 'ePing with payload (<source:Ping(4), >)' in state 'Pong_1'.
+<PrintLog> Pong called, counter = 2
+<MonitorLog> AlwaysCorrect is processing event 'ePong' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 4
+<SendLog> 'Pong(3)' in state 'Pong_1' sent event 'ePong with payload (<source:Pong(3), >)' to 'Ping(4)'.
+<DequeueLog> 'Ping(4)' dequeued event 'ePong with payload (<source:Pong(3), >)' in state 'Ping_1'.
+<MonitorLog> AlwaysCorrect is processing event 'ePing' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 5
+<SendLog> 'Ping(4)' in state 'Ping_1' sent event 'ePing with payload (<source:Ping(4), >)' to 'Pong(3)'.
+<DequeueLog> 'Pong(3)' dequeued event 'ePing with payload (<source:Ping(4), >)' in state 'Pong_1'.
+<PrintLog> Pong called, counter = 3
+<MonitorLog> AlwaysCorrect is processing event 'ePong' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 6
+<SendLog> 'Pong(3)' in state 'Pong_1' sent event 'ePong with payload (<source:Pong(3), >)' to 'Ping(4)'.
+<DequeueLog> 'Ping(4)' dequeued event 'ePong with payload (<source:Pong(3), >)' in state 'Ping_1'.
+<MonitorLog> AlwaysCorrect is processing event 'ePing' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 7
+<SendLog> 'Ping(4)' in state 'Ping_1' sent event 'ePing with payload (<source:Ping(4), >)' to 'Pong(3)'.
+<DequeueLog> 'Pong(3)' dequeued event 'ePing with payload (<source:Ping(4), >)' in state 'Pong_1'.
+<PrintLog> Pong called, counter = 4
+<MonitorLog> AlwaysCorrect is processing event 'ePong' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 8
+<SendLog> 'Pong(3)' in state 'Pong_1' sent event 'ePong with payload (<source:Pong(3), >)' to 'Ping(4)'.
+<DequeueLog> 'Ping(4)' dequeued event 'ePong with payload (<source:Pong(3), >)' in state 'Ping_1'.
+<MonitorLog> AlwaysCorrect is processing event 'ePing' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 9
+<SendLog> 'Ping(4)' in state 'Ping_1' sent event 'ePing with payload (<source:Ping(4), >)' to 'Pong(3)'.
+<DequeueLog> 'Pong(3)' dequeued event 'ePing with payload (<source:Ping(4), >)' in state 'Pong_1'.
+<PrintLog> Pong called, counter = 5
+<MonitorLog> AlwaysCorrect is processing event 'ePong' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 10
+<SendLog> 'Pong(3)' in state 'Pong_1' sent event 'ePong with payload (<source:Pong(3), >)' to 'Ping(4)'.
+<DequeueLog> 'Ping(4)' dequeued event 'ePong with payload (<source:Pong(3), >)' in state 'Ping_1'.
+<MonitorLog> AlwaysCorrect is processing event 'ePing' in state 'WaitForPingPongEvents'.
+<PrintLog> Ping intialized, global_counter = 11
+<ErrorLog> Assertion Failed: global_counter must be <= 10
+<StrategyLog> Found bug using 'random' strategy.
+<StrategyLog> Checking statistics:
+<StrategyLog> Found 1 bug.
+<StrategyLog> Scheduling statistics:
+<StrategyLog> Explored 1 schedule: 1 fair and 0 unfair.
+<StrategyLog> Found 100.00% buggy schedules.
+<StrategyLog> Number of scheduling points in fair terminating schedules: 28 (min), 28 (avg), 28 (max).

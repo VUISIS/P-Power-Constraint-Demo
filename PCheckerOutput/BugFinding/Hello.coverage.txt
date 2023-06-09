@@ -1,0 +1,98 @@
+Total event coverage: 71.4%
+===========================
+StateMachine: PImplementation.Battery
+=====================================
+Event coverage: 100.0%
+
+	State: __InitState__
+		State event coverage: 100.0%
+		Events received: PImplementation.Battery+ConstructorEvent
+		Events sent: PImplementation.Battery+ConstructorEvent
+		Next states: Init
+
+	State: Init
+		State has no expected events, so coverage is 100%
+		Events sent: PImplementation.eStartBatteryFailSafe
+		Previous states: __InitState__
+		Next states: Monitoring
+
+	State: Monitoring
+		State event coverage: 100.0%
+		Events received: PImplementation.eStartBatteryFailSafe, PImplementation.eUpdateBatteryPercentage
+		Events sent: PImplementation.eLanding, PImplementation.eUpdateBatteryPercentage
+		Previous states: Init, Monitoring
+		Next states: Landing, Monitoring
+
+	State: Landing
+		State event coverage: 100.0%
+		Events received: PImplementation.eLanding
+		Events sent: PImplementation.eLanding
+		Previous states: Monitoring
+		Next states: Landed
+
+	State: Landed
+		State has no expected events, so coverage is 100%
+		Previous states: Landing
+
+StateMachine: PImplementation.GeoFence
+======================================
+Event coverage: 55.6%
+
+	State: __InitState__
+		State event coverage: 100.0%
+		Events received: PImplementation.GeoFence+ConstructorEvent
+		Events sent: PImplementation.GeoFence+ConstructorEvent
+		Next states: Init_1
+
+	State: Init_1
+		State has no expected events, so coverage is 100%
+		Events sent: PImplementation.eStartGeoFence
+		Previous states: __InitState__
+		Next states: Monitoring_1
+
+	State: Monitoring_1
+		State event coverage: 75.0%
+		Events received: PImplementation.eDroneMovementResponse, PImplementation.eLanding, PImplementation.eStartGeoFence
+		Events sent: PImplementation.eRequestDroneMovement
+		Events not covered: PImplementation.eFenceDistanced
+		Previous states: GenerateMovement, Init_1
+		Next states: GenerateMovement, Landing_1
+
+	State: Holding is uncovered
+		Events not covered: PImplementation.eFenceReached, PImplementation.eLanding
+
+	State: GenerateMovement
+		State event coverage: 100.0%
+		Events received: PImplementation.eRequestDroneMovement
+		Events sent: PImplementation.eDroneMovementResponse
+		Previous states: Monitoring_1
+		Next states: Monitoring_1
+
+	State: Landing_1 is uncovered
+		Events not covered: PImplementation.eDecrementAltitude
+		Previous states: Monitoring_1
+
+	State: Landed_1
+		State has no expected events, so coverage is 100%
+
+StateMachine: PImplementation.Test_Original_Model
+=================================================
+Event coverage: 100.0%
+
+	State: __InitState__
+		State event coverage: 100.0%
+		Events received: PImplementation.Test_Original_Model+ConstructorEvent
+		Events sent: PImplementation.Test_Original_Model+ConstructorEvent
+		Next states: Init_2
+
+	State: Init_2
+		State has no expected events, so coverage is 100%
+		Previous states: __InitState__
+
+StateMachine: Plang.CSharpRuntime._GodMachine
+=============================================
+Event coverage: 100.0%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+

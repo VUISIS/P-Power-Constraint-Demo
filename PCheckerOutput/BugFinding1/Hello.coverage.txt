@@ -1,0 +1,78 @@
+Total event coverage: 71.4%
+===========================
+Monitor: PImplementation.AlwaysCorrect
+======================================
+Event coverage: 0.0%
+
+	State: Init_2
+		State has no expected events, so coverage is 100%
+		Next states: WaitForPingPongEvents[hot]
+
+	State: WaitForPingPongEvents is uncovered
+		Events received: ePing, ePong
+		Events not covered: PImplementation.ePing, PImplementation.ePong
+		Next states: WaitForPingPongEvents[hot]
+
+StateMachine: PImplementation.Ping
+==================================
+Event coverage: 100.0%
+
+	State: __InitState__
+		State event coverage: 100.0%
+		Events received: PImplementation.Ping+ConstructorEvent
+		Events sent: PImplementation.Ping+ConstructorEvent
+		Next states: Init_1
+
+	State: Init_1
+		State has no expected events, so coverage is 100%
+		Previous states: __InitState__
+		Next states: Ping_1
+
+	State: Ping_1
+		State event coverage: 100.0%
+		Events received: PImplementation.ePong
+		Events sent: PImplementation.ePing
+		Previous states: Init_1
+
+StateMachine: PImplementation.Pong
+==================================
+Event coverage: 100.0%
+
+	State: __InitState__
+		State event coverage: 100.0%
+		Events received: PImplementation.Pong+ConstructorEvent
+		Events sent: PImplementation.Pong+ConstructorEvent
+		Next states: Init
+
+	State: Init
+		State has no expected events, so coverage is 100%
+		Previous states: __InitState__
+		Next states: Pong_1
+
+	State: Pong_1
+		State event coverage: 100.0%
+		Events received: PImplementation.ePing
+		Events sent: PImplementation.ePong
+		Previous states: Init
+
+StateMachine: PImplementation.Test
+==================================
+Event coverage: 100.0%
+
+	State: __InitState__
+		State event coverage: 100.0%
+		Events received: PImplementation.Test+ConstructorEvent
+		Events sent: PImplementation.Test+ConstructorEvent
+		Next states: Init_3
+
+	State: Init_3
+		State has no expected events, so coverage is 100%
+		Previous states: __InitState__
+
+StateMachine: Plang.CSharpRuntime._GodMachine
+=============================================
+Event coverage: 100.0%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+
